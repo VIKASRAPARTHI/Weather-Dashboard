@@ -18,7 +18,7 @@ const WeatherDashboard = () => {
   }, [city]);
 
   const fetchAirQualityData = (lat, lon) => {
-    const API_KEY = '315955c4401edd9b142422c482cf721b'; // Replace with your OpenWeatherMap API key
+    const API_KEY = 'c7d0525ca8cdd4772238ed54412028aa'; // Replace with your OpenWeatherMap API key
     axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
       .then(response => {
         setAirQualityData(response.data.list[0]); // Set the first item in the list as air quality data
@@ -27,7 +27,7 @@ const WeatherDashboard = () => {
   };
 
   const fetchWeatherData = (city) => {
-    const API_KEY = 'Your Api Key'; // Replace with your OpenWeatherMap API key
+    const API_KEY = 'c7d0525ca8cdd4772238ed54412028aa'; // Replace with your OpenWeatherMap API key
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
