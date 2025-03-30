@@ -1,9 +1,5 @@
 import React from "react";
 
-
-// Define the props type for the HighlightBox component
-
-
 const HighlightBox = ({ title, value, Icon }) => {
   return (
     <div

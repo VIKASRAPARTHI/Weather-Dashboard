@@ -1,7 +1,7 @@
-import React, { useState,useEffect } from "react";
-import Navbar from "../src/components/navbar";
-import MainWeatherCard from "../src/components/mainweathercard";
+import React, { useEffect, useState } from "react";
 import FiveDayForecast from "../src/components/fiveday";
+import MainWeatherCard from "../src/components/mainweathercard";
+import Navbar from "../src/components/navbar";
 import TodayHighlights from "../src/components/todayhighlights";
 
 import axios from "axios";
@@ -18,7 +18,7 @@ const WeatherDashboard = () => {
   }, [city]);
 
   const fetchAirQualityData = (lat, lon) => {
-    const API_KEY = 'Your Api Key'; // Replace with your OpenWeatherMap API key
+    const API_KEY = '315955c4401edd9b142422c482cf721b'; // Replace with your OpenWeatherMap API key
     axios.get(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
       .then(response => {
         setAirQualityData(response.data.list[0]); // Set the first item in the list as air quality data
